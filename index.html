@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Battle - Battle Your Picks vs. The Market</title>
+    <meta name="description" content="Track your portfolio performance and battle your stock picks against major market indices like S&P 500 and NASDAQ.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .battle-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .icon-section {
+            text-align: center;
+            color: white;
+        }
+        
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .vs {
+            font-size: 1.5rem;
+            font-weight: bold;
+            opacity: 0.7;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            background: white;
+            padding: 60px 20px;
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f8f9fa;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .battle-icons {
+                gap: 15px;
+            }
+            
+            .icon {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Stock Battle</h1>
+            <p>Battle your picks vs. the market!</p>
+            
+            <div class="battle-icons">
+                <div class="icon-section">
+                    <span class="icon">🎯</span>
+                    <div>Your Pick</div>
+                </div>
+                <div class="vs">vs</div>
+                <div class="icon-section">
+                    <span class="icon">🏛️</span>
+                    <div>S&P 500</div>
+                </div>
+                <div class="vs">vs</div>
+                <div class="icon-section">
+                    <span class="icon">⚡</span>
+                    <div>NASDAQ</div>
+                </div>
+            </div>
+            
+            <a href="#" class="download-btn">📱 Download on App Store</a>
+        </div>
+        
+        <div class="features">
+            <h2>Why Stock Battle?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>📊 Real Performance Tracking</h3>
+                    <p>Track your portfolio's actual performance against major market indices with real-time data from Yahoo Finance.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🎯 Battle Mode</h3>
+                    <p>See how your stock picks perform versus the S&P 500 and NASDAQ. Who wins the battle?</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>📈 Visual Charts</h3>
+                    <p>Beautiful interactive charts show your performance over time with precise baseline comparisons.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🔒 Privacy First</h3>
+                    <p>Your data stays on your device. No accounts, no tracking, no sharing your portfolio information.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>⚡ Instant Results</h3>
+                    <p>Get immediate performance comparisons. See results in seconds, no sign-up required.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>📱 iOS Widget</h3>
+                    <p>Monitor your portfolio vs market performance right from your home screen.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 Stock Battle. All rights reserved.</p>
+            <div>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:support@stockbattle.app">Contact</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
