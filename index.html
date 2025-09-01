@@ -17,7 +17,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #7c4dff 100%);
             min-height: 100vh;
         }
         
@@ -31,6 +31,14 @@
             text-align: center;
             padding: 60px 20px;
             color: white;
+        }
+        
+        .app-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
         
         .hero h1 {
@@ -120,7 +128,76 @@
         .feature h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #667eea;
+            color: #3b82f6;
+        }
+        
+        .screenshots {
+            background: white;
+            padding: 60px 20px;
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+        
+        .screenshots h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .screenshot {
+            text-align: center;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .screenshot-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tech-specs {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            color: white;
+        }
+        
+        .tech-specs h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .tech-item {
+            text-align: center;
+        }
+        
+        .tech-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
         }
         
         .footer {
@@ -162,60 +239,97 @@
 <body>
     <div class="container">
         <div class="hero">
+            <div style="width: 120px; height: 120px; margin: 0 auto 30px; border-radius: 25px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); overflow: hidden;">
+                <img src="images/app-logo.png" alt="Stock Battle App Logo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
             <h1>Stock Battle</h1>
-            <p>Battle your picks vs. the market!</p>
+            <p>Compare your exact investments dollar-for-dollar against market indexes</p>
             
-            <div class="battle-icons">
-                <div class="icon-section">
-                    <span class="icon">🎯</span>
-                    <div>Your Pick</div>
+            <a href="https://apps.apple.com/us/app/stock-battle-compare-stocks/id6751454464" class="download-btn">📱 Download on App Store</a>
+            
+            <div class="screenshot-grid" style="margin: 40px 0; max-width: 1200px; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div class="screenshot">
+                    <img src="images/screenshot1.png" alt="Portfolio Dashboard" class="screenshot-img">
+                    <h4>Portfolio Dashboard</h4>
                 </div>
-                <div class="vs">vs</div>
-                <div class="icon-section">
-                    <span class="icon">🏛️</span>
-                    <div>S&P 500</div>
+                <div class="screenshot">
+                    <img src="images/screenshot2.png" alt="Market Battle" class="screenshot-img">
+                    <h4>Market Battle</h4>
                 </div>
-                <div class="vs">vs</div>
-                <div class="icon-section">
-                    <span class="icon">⚡</span>
-                    <div>NASDAQ</div>
+                <div class="screenshot">
+                    <img src="images/screenshot3.png" alt="Stock Performance" class="screenshot-img">
+                    <h4>Stock Performance</h4>
+                </div>
+                <div class="screenshot">
+                    <img src="images/screenshot4.png" alt="Realized Gains" class="screenshot-img">
+                    <h4>Realized Gains</h4>
+                </div>
+                <div class="screenshot">
+                    <img src="images/screenshot5.png" alt="Home Screen Widget" class="screenshot-img">
+                    <h4>Home Screen Widget</h4>
+                </div>
+                <div class="screenshot">
+                    <img src="images/screenshot6.png" alt="Stock Battle Comparison" class="screenshot-img">
+                    <h4>Battle View</h4>
                 </div>
             </div>
-            
-            <a href="#" class="download-btn">📱 Download on App Store</a>
         </div>
+        
         
         <div class="features">
             <h2>Why Stock Battle?</h2>
             <div class="feature-grid">
                 <div class="feature">
                     <h3>📊 Real Performance Tracking</h3>
-                    <p>Track your portfolio's actual performance against major market indices with real-time data from Yahoo Finance.</p>
+                    <p>Track your portfolio's actual performance against major market indices with real-time data. See dramatic visual charts showing your true opportunity cost.</p>
                 </div>
                 
                 <div class="feature">
-                    <h3>🎯 Battle Mode</h3>
-                    <p>See how your stock picks perform versus the S&P 500 and NASDAQ. Who wins the battle?</p>
+                    <h3>🎯 Market Battle Mode</h3>
+                    <p>Compare your stocks against S&P 500 and NASDAQ with precise dollar-for-dollar analysis. Stop guessing if your stocks are beating the market.</p>
                 </div>
                 
                 <div class="feature">
-                    <h3>📈 Visual Charts</h3>
-                    <p>Beautiful interactive charts show your performance over time with precise baseline comparisons.</p>
+                    <h3>💰 Tax-Smart Tracking</h3>
+                    <p>Complete realized gains history with short-term vs long-term capital gains breakdown. Perfect for tax preparation.</p>
                 </div>
                 
                 <div class="feature">
                     <h3>🔒 Privacy First</h3>
-                    <p>Your data stays on your device. No accounts, no tracking, no sharing your portfolio information.</p>
+                    <p>Your portfolio stays secure on your device. No one else can view it (not even us). Option to hide investment amounts for extra privacy.</p>
                 </div>
                 
                 <div class="feature">
-                    <h3>⚡ Instant Results</h3>
-                    <p>Get immediate performance comparisons. See results in seconds, no sign-up required.</p>
+                    <h3>⚡ No Signup Required</h3>
+                    <p>See results in seconds. Get immediate performance comparisons without creating accounts or sharing personal information.</p>
                 </div>
                 
                 <div class="feature">
-                    <h3>📱 iOS Widget</h3>
-                    <p>Monitor your portfolio vs market performance right from your home screen.</p>
+                    <h3>📱 Live Widgets</h3>
+                    <p>Home screen widgets showing your best performers and portfolio vs S&P 500 comparison at a glance.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="tech-specs">
+            <h2>Technical Details</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h3>📱 Requirements</h3>
+                    <p>iOS 17.0 or later</p>
+                </div>
+                <div class="tech-item">
+                    <h3>💾 Size</h3>
+                    <p>4.4 MB download</p>
+                </div>
+                <div class="tech-item">
+                    <h3>💳 Price</h3>
+                    <p>Free</p>
+                </div>
+                <div class="tech-item">
+                    <h3>🏷️ Category</h3>
+                    <p>Finance</p>
                 </div>
             </div>
         </div>
